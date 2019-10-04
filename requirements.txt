@@ -1,0 +1,9 @@
+
+yarn global add create-react-app dbtp
+
+yarn add react-router-dom
+
+yarn add semantic-ui-react
+yarn add semantic-ui-css
+
+yarn add google-map-react

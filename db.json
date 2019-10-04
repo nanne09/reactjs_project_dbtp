@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "firstName": "Sébastien",
+      "lastName": "Martin",
+      "societyName": "Grand Chalon",
+      "email": "s.martin@grandchalon.com",
+      "phone": "0148784544",
+      "message": "Merci de m'envoyer votre plaquette",
+      "id": 1
+    },
+    {
+      "object": "AO",
+      "firstName": "",
+      "lastName": "Delaporte",
+      "societyName": "Yahoo",
+      "email": "as.delaporte@gmail.com",
+      "phone": "0142444555",
+      "message": "J'ai un dossier à vous soumettre",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "React Application",
+      "author": "Fabio"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
