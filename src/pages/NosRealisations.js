@@ -1,39 +1,64 @@
 import React, { Component } from 'react';
-import { Form, Input  } from 'semantic-ui-react';
+import { Form, Select, Button } from 'semantic-ui-react';
 
-import TemplateInput from '../components/NousContacter/templateInput'
+import MetiersSelect from '../components/NosRealisations/MetiersSelect';
+import RealisationsSelect from '../components/NosRealisations/RealisationsSelect';
+
 
 class NosRealisations extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            firstName: ''
+            metier: '', 
+            realisation : ''
         }
     }
-    
-    // Méthode pour récupérer les valeurs de chaque input
-    handleInputChange = (event, id) => {
-        console.log(event.target.value)
-        this.setState({
-            [id]: event.target.value,
-        });
+
+    handleSelectMetier = (e, {value}) => {
+        const resultA = Object.values({value})
+        const resultB = resultA[0]
+        this.setState({ 
+            metier : resultB,
+            realisation : ''
+        })
     }
 
+    handleSelectRealisation = (e, {value}) => {
+        const resultA = Object.values({value})
+        const resultB = resultA[0]
+        this.setState({ realisation : resultB })
+    }
+
+    onSubmitRequest = (e) => {
+        e.preventDefault();
+    }
+    
     render() {
+        console.log(this.state.metier)
+        console.log(this.state.realisation)
+
         return (
             <>
                 <h1>Nos Réalisations</h1>
                 <Form>
                     <Form.Group widths="equal">
-                        <TemplateInput
-                            control={Input}
-                            id="firstName"
-                            type="text"
-                            placeholder="Filtrer par catégorie"
-                            forwardValue={this.state.firstName}
-                            forwardMethod={(event)=>this.handleInputChange(event, 'firstName')}
+                        <MetiersSelect
+                            control={Select}
+                            label="Métier"
+                            placeholder="- Sélection -"
+                            forwardValue={this.state.metier}
+                            forwardMethod={this.handleSelectMetier}
+                        />
+                        <RealisationsSelect
+                            control={Select}
+                            id={this.state.metier}
+                            label="Type de réalisation"
+                            placeholder="- Sélection -"
+                            forwardValue={this.state.realisation}
+                            forwardMethod={this.handleSelectRealisation}
                         />
                     </Form.Group>
+                    <Form.Field control={Button} onClick={this.onSubmitRequest}>Rechercher</Form.Field> 
                 </Form>
             </>
         )           

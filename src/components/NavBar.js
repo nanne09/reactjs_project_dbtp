@@ -1,25 +1,20 @@
-import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
-import { Link } from "react-router-dom"
+import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react';
+import { Link } from "react-router-dom";
 
 class NavBar extends Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {}
-    // }
     state = {}
 
-    handleItemClick = ({ name }) => this.setState({ activeItem: name })
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
-    render() {
+    render() {   
         const { activeItem } = this.state
-        //console.log(this.state)
+
         return (
-            <Menu stackable>
+            <Menu pointing secondary>
                 <Menu.Item>
                     <img src='/img/NavBar/logodbtp.jpg' alt="logo entreprise dbtp"/>
                 </Menu.Item>
-                
                 <Menu.Item
                     as="span"
                     name='accueil'
@@ -28,7 +23,6 @@ class NavBar extends Component {
                 >
                     <Link to="/">ACCUEIL</Link>                
                 </Menu.Item>
-
                 <Menu.Item
                     as="span"
                     name='entreprise'
@@ -37,7 +31,6 @@ class NavBar extends Component {
                 >
                     <Link to="/entreprise">L'ENTREPRISE</Link>                
                 </Menu.Item>
-                
                 <Menu.Item
                     as="span"
                     name='metiers'
@@ -46,7 +39,6 @@ class NavBar extends Component {
                 >
                     <Link to="/metiers">NOS METIERS</Link>                
                 </Menu.Item>
-                
                 <Menu.Item
                     as="span"
                     name='realisations'
@@ -55,7 +47,6 @@ class NavBar extends Component {
                 >
                     <Link to="/realisations">NOS REALISATIONS</Link>                
                 </Menu.Item>
-                
                 <Menu.Item
                     as="span"
                     name='engagements'
@@ -64,7 +55,6 @@ class NavBar extends Component {
                 >
                     <Link to="/engagements">NOS ENGAGEMENTS</Link>                
                 </Menu.Item>
-
                 <Menu.Item
                     as='span'
                     name='contact'
@@ -73,7 +63,6 @@ class NavBar extends Component {
                 >
                     <Link to="/contact">NOUS CONTACTER</Link>
                 </Menu.Item>
-
                 <Menu.Item
                     as='span'
                     name='localisation'
@@ -82,7 +71,6 @@ class NavBar extends Component {
                 >
                     <Link to="/localisation">NOUS TROUVER</Link>
                 </Menu.Item>
-
             </Menu>
         )
     }

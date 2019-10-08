@@ -18,25 +18,103 @@
       "phone": "0142444555",
       "message": "J'ai un dossier à vous soumettre",
       "id": 2
+    },
+    {
+      "object": "",
+      "firstName": "Sarah",
+      "lastName": "Chakchouk",
+      "societyName": "Soffteam",
+      "email": "sarah_chakchouk@yahoo.fr",
+      "phone": "06 45 78 79 44",
+      "message": "J'aimerais recevoir votre plaquette.",
+      "id": 3
+    },
+    {
+      "object": "",
+      "firstName": "Francoise",
+      "lastName": "Peri",
+      "societyName": "KPMG",
+      "email": "francoise.peri@wanadoo.fr",
+      "phone": "0608668969",
+      "message": "Pourriez-vous me rappeler ? ",
+      "id": 4
+    },
+    {
+      "object": "",
+      "firstName": "",
+      "lastName": "",
+      "societyName": "",
+      "email": "",
+      "phone": "",
+      "message": "",
+      "id": 5
+    },
+    {
+      "object": "INFO",
+      "firstName": "Pierre",
+      "lastName": "Martin",
+      "societyName": "",
+      "email": "pierre.martin@gmail.com",
+      "phone": "0148068320",
+      "message": "Merci de me recontacter",
+      "id": 6
     }
   ],
-  "posts": [
+  "metiers": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "type": "batiment",
+      "title": "Expert sur l’ensemble des segments du marché",
+      "article": "Sur tout le territoire, les réalisations de VINCI Construction France sont la signature d'une entreprise qui offre la palette d'expertises la plus large en conception, construction et rénovation-restructuration de bâtiments, de programme mixtes et d'îlots urbains multifonctionnels. Cette compétence d'ensemblier lui permet d'accompagner chaque client pour créer de la valeur durable à toutes les étapes et dans tous les aspects de son projet."
     },
     {
       "id": 2,
-      "title": "React Application",
-      "author": "Fabio"
+      "type": "ouvrages_publics",
+      "title": "La force d’un opérateur intégré",
+      "article": "VINCI Construction France s’est doté d’une organisation associant proximité avec nos clients et capacité à fédérer et orchestrer moyens et compétences. L’entreprise maîtrise tous les métiers du génie civil, ce qui lui permet d’être un acteur majeur dans les domaines du transport et des travaux souterrains, de la ville et du développement urbain, de l’énergie conventionnelle, renouvelable ou nucléaire, ou encore des ouvrages fonctionnels."
+    },
+    {
+      "id": 3,
+      "type": "reseaux_humides",
+      "title": "Une maîtrise des projets de la conception jusqu’à l'entretien",
+      "article": "Les ressources en ingénierie renforcées par les bureaux d'études internes et les synergies avec les métiers du génie civil représentent des atouts majeurs. L’entreprise est ainsi en mesure de conduire tous types de projets depuis leur conception jusqu'à leur entretien : réseaux et usines de traitement d’épuration et de production d'eau potable, canalisations et réseaux d’assainissement, usines de dessalement de mer, stations de pompage... S'y ajoutent la réalisation de réseaux de chaleur ou de fibre optique, et les chantiers de voiries et réseaux divers (VRD), qui mobilisent des savoir-faire similaires."
+    },
+    {
+      "id": 4,
+      "type": "reseaux_secs",
+      "title": "Branchement et raccordement eau, voirie et réseaux divers (travaux VRD)",
+      "article": "Suite à la demande de certains partenaires, nous avons développé un pôle VRD (Voirie et Réseaux Divers). Celui-ci réalise les études et différents aménagements de voiries tels que les terrassements, les bassins de rétention, la mise en place des réseaux des concessionnaires, tous les revêtements de structure y compris les aménagements d’espaces verts. Le pôle VRD réalise depuis de nombreuses années des chantiers qualitatifs pour les particuliers mais s’attaque aussi à de gros chantiers pour des clients prestigieux comme Disneyland Paris par exemple. Vous avez un projet à nous confier ? Prenez contact avec notre entreprise TERCA située à Lagny-sur-Marne, qui intervient dans l’ensemble de l’Île-de-France et sur tout le territoire français pour relever le défi."
+    },
+    {
+      "id": 5,
+      "type": "recyclage_materiaux",
+      "title": "Une vision intégrale du développement immobilier",
+      "article": "Adim exerce son savoir-faire dans les domaines suivants : opérations mixtes, immeubles de bureaux, commerces de proximité ou retails parks, immobilier de tourisme, équipements administratifs, de loisir, de santé ou d'enseignement…Expert également reconnu dans le domaine de l'habitat, Adim accompagne les investisseurs privés et les bailleurs sociaux pour développer le logement dans toutes ses spécificités : résidences gérées, collectifs, intermédiaires ou aidés…"
     }
   ],
-  "comments": [
+  "realisation": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "type": "batiment",
+      "sous_type": "logements",
+      "maitrise_ouvrage": "OPAC",
+      "maitre_oeuvre": "Cabinet Archi 2000",
+      "calendrier": "Septembre 2013 –  juillet 2015",
+      "resume": "5 000 logements équipés, 500 tubes d’acier de 12 m de long ",
+      "title": "Un chauffage urbain plein d'énergie",
+      "article": "Dans le cadre de la rénovation de l’ancienne zone portuaire des Bassins à flot, le projet consiste à terrasser 3 km de tranchées, afin d'enfouir au total 6 km de conduites d'eau chaude. Un chantier atypique par un montage juridique singulier et le renforcement de la classe d'isolation des conduites d'eau."
+    },
+    {
+      "id": 2,
+      "type": "ouvrages_publics",
+      "sous_type": "equipements_publics",
+      "maitrise_ouvrage": "Adim Nord-Picardie",
+      "maitre_oeuvre": "Tank Architectes",
+      "calendrier": "Mars 2015 - septembre 2017",
+      "resume": "2 résidences distinctes reconstruites en une. 325 lits. 4 m de profondeur de sous-sol construit",
+      "title": "Réalisation de l’Ehpad Iter-Vitae, Lille (59)",
+      "subtitle": "Un projet audacieux",
+      "article": "A l’origine, deux résidences distinctes de quelques centaines de mètres : les établissements d’hébergement pour personnes âgées dépendantes (Ehpad) Marguerite-Yourcenar et Notre-Dame-d’Espérance, et une recherche d’unification de ces deux structures sur un site optimisé. La réponse fournie par les équipes d’Adim Nord-Picardie consiste à démolir le deuxième Ehpad tout juste amorti pour tout reconstruire à neuf ! L’audace de la proposition se propose de faire de ce nouvel Ehpad nommé Iter Vitae, l’un des plus gros d’Europe avec 325 lits et près de 300 collaborateurs, un lieu de vie mixte et moderne pleinement intégré dans la cité Lilloise."
     }
   ],
   "profile": {

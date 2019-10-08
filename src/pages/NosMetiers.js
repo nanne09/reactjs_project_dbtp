@@ -1,65 +1,43 @@
 import React, { Component } from 'react';
 import { Card } from 'semantic-ui-react';
 
+import * as NavBarMetier from '../components/NosMetiers/NavBarMetier.json';
 import TypeMetier from '../components/NosMetiers/TypeMetier';
+import BreadcrumbMetier from '../components/Breadcrumb';
+import DescriptionMetier from '../components/NosMetiers/DescriptionMetier';
 
 class NosMetiers extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            metier: ''
+            metierName: '', 
+            metierHeader: '',
         }
     }
 
-    handleMetierClick = (choice) => {
-        this.setState({ metier: choice });
+    handleMetierClick = (e, choiceName, choiceHeader) => {
+        e.preventDefault();
+
+        // mémorisation de la sélection du métier par le user
+        this.setState({ 
+            metierName: choiceName,
+            metierHeader: choiceHeader  
+        });
     }
 
     render () {
 
-        const bankImage = {
-            batiment: {
-                name: 'batiment',
-                image: '/img/NosMetiers/batiment.jpg',
-                header: 'Bâtiment',
-                desc: 'Du gros oeuvre à la construction de site industriel.',
-                alt: 'activité bâtiment'
-            },
-            ouvragesPublics: {
-                name: 'ouvragesPublics',
-                image: '/img/NosMetiers/ouvragesPublics.jpg',
-                header: 'Ouvrages publics',
-                desc: 'Réalisation de crèches, mairies et centres culturels.',
-                alt:'activité ouvrages publics'
-            }, 
-            rsxHumides: {
-                name : 'rsxHumides',
-                image: '/img/NosMetiers/rsxHumides.jpg',
-                header: 'Réseaux Humides',
-                desc: 'Gestion des réseaux : eau, chauffage urbain.',
-                alt:'activité réseaux humides'
-            }, 
-            rsxSecs: {
-                name: 'rsxSecs',
-                image: '/img/NosMetiers/rsxSecs.jpg',
-                header: 'Réseaux Secs',
-                desc: 'Gestion des réseaux : électricité, gaz, fibre optique.',
-                alt:'activité réseaux secs'
-            }, 
-            valorisation: {
-                name: 'valorisation',
-                image: '/img/NosMetiers/valorisation.jpg',
-                header: 'Recyclage des matériaux',
-                desc: 'Gestion à 360 du cycle de vie des déchêts.',
-                alt:'activité recyclage des matériaux'
-            }
-        }
+        console.log(this.state.metierName);
 
         return (
             <>
+                <BreadcrumbMetier forwardValue={this.state.metierHeader}/>
+                <h1>Nos Métiers</h1>
                 <Card.Group itemsPerRow={5}>
-                    { Object.values(bankImage).map((value, i) => <TypeMetier key={i} data={value} forwardMethod={() => this.handleMetierClick(value.name)}/>)}
+                    { Object.values(NavBarMetier.bankImage).map((value, i) => <TypeMetier key={i} data={value} forwardMethod={(e) => this.handleMetierClick(e, value.name, value.header)}/>)}
                 </Card.Group>
+                <br/>
+                <DescriptionMetier forwardMetier={this.state.metierName}/>
             </>
         )
     }

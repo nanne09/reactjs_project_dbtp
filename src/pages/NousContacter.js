@@ -55,6 +55,33 @@ class NousContacter extends Component {
     // Méthode pour rediriger l'utilisateur après la soumission du formulaire de contact
     onSubmitForm = (e) => {
         e.preventDefault();
+        
+        // données saisies par l'utilisateur
+        const user = {
+            object: this.state.object,
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            societyName: this.state.societyName,
+            email: this.state.email,
+            phone: this.state.phone,
+            message: this.state.message,
+            rgpdIsChecked: this.state.rgpdIsChecked
+        };
+
+        // envoi à la BDD
+        const myInit = {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user),
+            // mode: 'cors',
+        };
+            
+        fetch('http://localhost:4000/users/', myInit).then(response => console.log(response))
+            
+        // redirection vers la page de remerciement.
         this.props.history.push('/merci');
     }
 

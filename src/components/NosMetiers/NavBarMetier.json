@@ -1,0 +1,39 @@
+{
+    "bankImage": [
+        {
+            "name": "batiment",
+            "image": "/img/NosMetiers/batiment.jpg",
+            "header": "Bâtiment",
+            "desc": "Du gros oeuvre à la construction de site industriel.",
+            "alt": "activité bâtiment"
+        },
+        {
+            "name": "ouvrages_publics",
+            "image": "/img/NosMetiers/ouvragesPublics.jpg",
+            "header": "Ouvrages Publics",
+            "desc": "Réalisation de crèches, mairies et centres culturels.",
+            "alt":"activité ouvrages publics"
+        },
+        {
+            "name": "reseaux_humides",
+            "image": "/img/NosMetiers/rsxHumides.jpg",
+            "header": "Réseaux Humides",
+            "desc": "Eau, assainissement, réseau chauffage.",
+            "alt":"activité réseaux humides"
+        },
+        {
+            "name": "reseaux_secs",
+            "image": "/img/NosMetiers/rsxSecs.jpg",
+            "header": "Réseaux Secs",
+            "desc": "Gestion des réseaux : électricité, gaz, fibre optique.",
+            "alt":"activité réseaux secs"
+        },
+        {
+            "name": "recyclage_materiaux",
+            "image": "/img/NosMetiers/valorisation.jpg",
+            "header": "Recyclage des matériaux",
+            "desc": "Gestion à 360° du cycle de vie des déchêts.",
+            "alt":"activité recyclage des matériaux"
+        }
+    ]
+}
